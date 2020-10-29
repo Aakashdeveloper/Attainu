@@ -10,7 +10,7 @@
 
 # Application have 3 end point
 > To Authenticate the user \
-(POST) > https://attainu-code.herokuapp.com/api/auth/login \
+**(POST)** > https://attainu-code.herokuapp.com/api/auth/login \
 (body) > {"email":"abc@gmail.com","password":"12345678"} \
 (repsponse) > 
 {
