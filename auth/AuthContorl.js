@@ -1,29 +1,27 @@
-const express = require('express');
+import express from 'express';
 const router = express.Router();
-const bodyParser = require('body-parser');
-const jwt = require('jsonwebtoken');
+import bodyParser from 'body-parser';
+import jwt from 'jsonwebtoken';
 const config = require('../config');
-const jsonpatch = require('jsonpatch');
-const sharp = require('sharp');
-const fs = require('fs');
-const request = require('request');
+import jsonpatch from 'jsonpatch';
+import sharp from 'sharp';
+import fs from 'fs';
+import request from 'request';
 
 router.use(bodyParser.urlencoded({extended:true}));
 router.use(bodyParser.json());
 
-
-
 //Login User
 router.post('/login',(req,res) => {
     if(req.body.email && req.body.password){
-        var token = jwt.sign({id:req.body.email},config.secert,{expiresIn:3600});
+        let token = jwt.sign({id:req.body.email},config.secert,{expiresIn:3600});
         res.send({auth:true,token:token})
     }
 })
 
 //JSON Patch
 router.get('/jsonpatch',(req,res) => {
-    var token = req.headers['x-access-token']
+    let token = req.headers['x-access-token']
     if(!token) res.send({auth:false,token:'No Token Provided'})
     jwt.verify(token,config.secert,(err,data) => {
         if(err) return res.status(500).send({auth:false,token:'Invalid Token Provided'});
@@ -41,7 +39,7 @@ router.get('/jsonpatch',(req,res) => {
 
 //imageConvert
 router.get('/imageConvert',(req,res) => {
-    var token = req.headers['x-access-token']
+    let token = req.headers['x-access-token']
     if(!token) res.send({auth:false,token:'No Token Provided'})
     jwt.verify(token,config.secert,(err,data) => {
         if(err) return res.status(500).send({auth:false,token:'Invalid Token Provided'});
@@ -67,4 +65,4 @@ router.get('/imageOutput',(req,res) => {
     })
 });
 
-module.exports = router;
+export default router;

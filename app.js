@@ -1,11 +1,11 @@
-const express = require('express');
+import express from 'express';
 const app = express();
-const cors = require('cors');
-const port = 5001;
+import cors from 'cors';
+const port = process.env.PORT || 5001;
+import AuthController from './auth/AuthContorl';
 
 app.use(cors());
 
-var AuthController = require('./auth/AuthContorl');
 app.use('/api/auth', AuthController);
 
 app.listen(port, () => {
