@@ -6,7 +6,12 @@ import AuthController from './auth/AuthContorl';
 
 app.use(cors());
 
+app.get('/',(req,res) => {
+    res.status(200).send('Health Check Pass')
+})
+
 app.use('/api/auth', AuthController);
+
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`)
