@@ -10,7 +10,7 @@
 
 # Application have 3 end point
 > To Authenticate the user
-(POST) > http://localhost:5001/api/auth/login
+(POST) > https://attainu-code.herokuapp.com/api/auth/login
 (body) > {"email":"abc@gmail.com","password":"12345678"}
 (repsponse) > 
 {
@@ -22,7 +22,7 @@ Token is valid for one hour after each login
 ![Authenticate](https://i.ibb.co/1TQnmzB/Screenshot-2020-10-30-at-1-01-14-AM.png)
 
 > JSON patching
-(GET)  > http://localhost:5001/api/auth/jsonpatch
+(GET)  > https://attainu-code.herokuapp.com/api/auth/jsonpatch
 (Header) > ['x-access-token':'token generated in first call']
 (response) > {
     "baz": "boo",
@@ -33,15 +33,15 @@ Token is valid for one hour after each login
 
 
 > Image Thumbnail Generation
-(GET) > http://localhost:5001/api/auth/imageConvert
+(GET) >https://attainu-code.herokuapp.com/api/auth/imageConvert
 (Pass Query params) (?url=https://cdn.idsitnetwork.net/wp-content/uploads/sites/27/2019/01/flower-shop-fields-of-romance-148245.jpg)
 (Header) > ['x-access-token':'token generated in first call']
-(response) > Paste Url in browser to download image "http://localhost:5001/api/auth/imageOutput"
+(response) > Paste Url in browser to download image "https://attainu-code.herokuapp.com/api/auth/imageOutput"
 
 ![Image Thumbnail Generation](https://i.ibb.co/Fbk3D6W/Screenshot-2020-10-30-at-1-05-50-AM.png)
 
 
 > Check Image output
-(GET) > http://localhost:5001/api/auth/imageOutput
+(GET) > https://attainu-code.herokuapp.com/api/auth/imageOutput
 (Response) > Converted Image
 ![Image Output](https://i.ibb.co/qN7PHvV/Screenshot-2020-10-30-at-1-06-33-AM.png)

@@ -52,7 +52,7 @@ router.get('/imageConvert',(req,res) => {
         download(req.query.url, 'userInput.png', function(err,data){
             sharp('userInput.png').resize(50,50) 
             .jpeg({quality : 50}).toFile('output_thumb.jpg'); 
-            res.status(200).send(`Paste Url in browser to download image "http://localhost:5001/api/auth/imageOutput"`);
+            res.status(200).send(`Paste Url in browser to download image "https://attainu-code.herokuapp.com/api/auth/imageOutput"`);
         })
     });
 });
