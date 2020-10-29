@@ -16,7 +16,7 @@
 {
     "auth": true,
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9eyJpZCI6ImFiY0BnbWFpbC5jb20iLCJpYXQiOjE2MDM5OTg1MzQsImV4cCI6MTYwNDA4NDkzNH0.WqfRqhcWVjkxPRH6nTmAsQ9WKJ__r1BDTqWJRF4rtCw"
-}\
+}
 Token is valid for one hour after each login
 
 ![Authenticate](https://i.ibb.co/1TQnmzB/Screenshot-2020-10-30-at-1-01-14-AM.png)
@@ -27,7 +27,7 @@ Token is valid for one hour after each login
 **(Response)** > {
     "baz": "boo",
     "foo": "bar"
-} \
+} 
 
 ![Patching](https://i.ibb.co/9tT1P1f/Screenshot-2020-10-30-at-1-04-17-AM.png)
 
@@ -36,7 +36,7 @@ Token is valid for one hour after each login
 **(GET)** >https://attainu-code.herokuapp.com/api/auth/imageConvert \
 **(Pass Query params)** ?url=https://cdn.idsitnetwork.net/wp-content/uploads/sites/27/2019/01/flower-shop-fields-of-romance-148245.jpg \
 **(Header)** > ['x-access-token':'token generated in first call'] \
-**(response)** > Paste Url in browser to download image "https://attainu-code.herokuapp.com/api/auth/imageOutput" \
+**(response)** > Paste Url in browser to download image "https://attainu-code.herokuapp.com/api/auth/imageOutput" 
 
 ![Image Thumbnail Generation](https://i.ibb.co/Fbk3D6W/Screenshot-2020-10-30-at-1-05-50-AM.png)
 
