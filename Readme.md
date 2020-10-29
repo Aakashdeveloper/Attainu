@@ -3,7 +3,7 @@
 > JSON patching
 > Image Thumbnail Generation
 
-> Technology use ==> NodeJs
+> Technology use ==> NodeJs \
 > Npm Packages ==> body-parser, cors, express, jsonpatch, jsonwebtoken, request, sharp, @babel/core ,@babel/preset-env,
     "@babel/register
 
